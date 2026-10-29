@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&cmid=3309 -->
+<html dir="ltr" lang="en" xml:lang="en" class="yui3-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="autocompletion.css">.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_dark.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #3a674e;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);    position: absolute;    z-index: 2;}.ace_dark.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid rgba(109, 150, 13, 0.8);    background: rgba(58, 103, 78, 0.62);}.ace_completion-meta {    opacity: 0.5;    margin: 0.9em;}.ace_completion-message {    color: blue;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #2d69c7;}.ace_dark.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #93ca12;}.ace_editor.ace_autocomplete {    width: 300px;    z-index: 200000;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;    background: #fefefe;    color: #111;}.ace_dark.ace_editor.ace_autocomplete {    border: 1px #484747 solid;    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.51);    line-height: 1.4;    background: #25282c;    color: #c1c1c1;}
+/*# sourceURL=ace/css/autocompletion.css */</style><style id="snippets.css">.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}
+/*# sourceURL=ace/css/snippets.css */</style><style id="error_marker.css">    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }
+/*# sourceURL=ace/css/error_marker.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style id="ace_editor.css">.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_editor {position: relative;overflow: hidden;padding: 0;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;box-sizing: border-box;min-width: 100%;contain: style size layout;font-variant-ligatures: no-common-ligatures;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;contain: style size layout;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {position: absolute;top: 0;left: 0;right: 0;padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {contain: strict;position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;contain: strict;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: transparent;color: inherit;z-index: 1000;opacity: 1;}.ace_composition_placeholder { color: transparent }.ace_composition_marker { border-bottom: 1px solid;position: absolute;border-radius: 0;margin-top: 1px;}[ace_nocontext=true] {transform: none!important;filter: none!important;clip-path: none!important;mask : none!important;contain: none!important;perspective: none!important;mix-blend-mode: initial!important;z-index: auto;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;height: 1000000px;contain: style size layout;}.ace_text-layer {font: inherit !important;position: absolute;height: 1000000px;width: 1000000px;contain: style size layout;}.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {contain: style size layout;position: absolute;top: 0;left: 0;right: 0;}.ace_hidpi .ace_text-layer,.ace_hidpi .ace_gutter-layer,.ace_hidpi .ace_content,.ace_hidpi .ace_gutter {contain: strict;will-change: transform;}.ace_hidpi .ace_text-layer > .ace_line, .ace_hidpi .ace_text-layer > .ace_line_group {contain: strict;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_hasPlaceholder .ace_hidden-cursors .ace_cursor {opacity: 0;}.ace_smooth-blinking .ace_cursor {transition: opacity 0.18s;}.ace_animate-blinking .ace_cursor {animation-duration: 1000ms;animation-timing-function: step-end;animation-name: blink-ace-animate;animation-iteration-count: infinite;}.ace_animate-blinking.ace_smooth-blinking .ace_cursor {animation-duration: 1000ms;animation-timing-function: ease-in-out;animation-name: blink-ace-animate-smooth;}@keyframes blink-ace-animate {from, to { opacity: 1; }60% { opacity: 0; }}@keyframes blink-ace-animate-smooth {from, to { opacity: 1; }45% { opacity: 1; }60% { opacity: 0; }85% { opacity: 0; }}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_error_bracket {position: absolute;border-bottom: 1px solid #DE5555;border-radius: 0;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;box-sizing: border-box;}.ace_line .ace_fold {box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_inline_button {border: 1px solid lightgray;display: inline-block;margin: -1px 8px;padding: 0 5px;pointer-events: auto;cursor: pointer;}.ace_inline_button:hover {border-color: gray;background: rgba(200,200,200,0.2);display: inline-block;pointer-events: auto;}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_mobile-menu {position: absolute;line-height: 1.5;border-radius: 4px;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;background: white;box-shadow: 1px 3px 2px grey;border: 1px solid #dcdcdc;color: black;}.ace_dark > .ace_mobile-menu {background: #333;color: #ccc;box-shadow: 1px 3px 2px grey;border: 1px solid #444;}.ace_mobile-button {padding: 2px;cursor: pointer;overflow: hidden;}.ace_mobile-button:hover {background-color: #eee;opacity:1;}.ace_mobile-button:active {background-color: #ddd;}.ace_placeholder {font-family: arial;transform: scale(0.9);transform-origin: left;white-space: pre;opacity: 0.7;margin: 0 10px;}
+/*# sourceURL=ace/css/ace_editor.css */</style>
+    <title>Problem 3: Finding Complexity using Counter Method: Attempt review</title>
+    <link rel="shortcut icon" href="http://118.185.187.137/moodle/theme/image.php/lambda2/theme/1753066307/favicon">
+    
+<meta name="keywords" content="moodle, Problem 3: Finding Complexity using Counter Method: Attempt review">
+<link rel="stylesheet" type="text/css" href="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/combo"><script charset="utf-8" id="yui_3_17_2_1_1793279575410_8" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/combo(1)" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1793279575410_19" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript.php" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1793279575410_39" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(1).php" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1793279575410_40" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(2).php" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1793279575410_41" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/combo(2)" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1793279575410_72" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/MathJax.js.download" async=""></script><script charset="utf-8" id="yui_3_17_2_2_1793279575410_2" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/combo(3)" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/styles.php">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"http:\/\/118.185.187.137\/moodle","homeurl":{},"sesskey":"GnX0Z6Aehi","sessiontimeout":"28800","sessiontimeoutwarning":"1200","themerev":"1753066307","slasharguments":1,"theme":"lambda2","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1752832296","admin":"admin","svgicons":true,"usertimezone":"Asia\/Kolkata","courseId":202,"courseContextId":52338,"contextid":52356,"contextInstanceId":3309,"langrev":1752832296,"templaterev":"1752832296"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"http:\/\/118.185.187.137\/moodle\/lib\/yuilib\/3.17.2\/","comboBase":"http:\/\/118.185.187.137\/moodle\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"http:\/\/118.185.187.137\/moodle\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"http:\/\/118.185.187.137\/moodle\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"http:\/\/118.185.187.137\/moodle\/theme\/yui_combo.php?m\/1752832296\/","combine":true,"comboBase":"http:\/\/118.185.187.137\/moodle\/theme\/yui_combo.php?","ext":false,"root":"m\/1752832296\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-beautify":{},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"http:\/\/118.185.187.137\/moodle\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"http:\/\/118.185.187.137\/moodle\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1752832296\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"http:\/\/118.185.187.137\/moodle\/lib\/javascript.php\/1752832296\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"http:\/\/118.185.187.137\/moodle\/lib\/javascript.php\/1752832296\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"},"core_question_flags":{"name":"core_question_flags","fullpath":"http:\/\/118.185.187.137\/moodle\/lib\/javascript.php\/1752832296\/question\/flags.js","requires":["base","dom","event-delegate","io-base"]},"core_question_engine":{"name":"core_question_engine","fullpath":"http:\/\/118.185.187.137\/moodle\/lib\/javascript.php\/1752832296\/question\/qengine.js","requires":["node","event"]},"mod_quiz":{"name":"mod_quiz","fullpath":"http:\/\/118.185.187.137\/moodle\/lib\/javascript.php\/1752832296\/mod\/quiz\/module.js","requires":["base","dom","event-delegate","event-key","core_question_engine"]}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/requirejs.php"></script><script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+    config: ["Accessible.js", "Safe.js"],
+    errorSettings: { message: ["!"] },
+    skipStartupTypeset: true,
+    messageStyle: "none"
+});
+</script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(3).php"></script><script type="text/javascript">
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3295');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('course-index-section-1501');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3307');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3308');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3309');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3310');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3311');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('course-index-section-1503');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3317');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3318');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3319');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3320');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3321');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('course-index-section-1505');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3312');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3313');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3314');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3315');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3316');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('course-index-section-1504');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3322');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3323');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3324');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3325');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('course-index-section-1506');
+    });
+    ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3326');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3327');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3328');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3329');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3330');
+                });
+                ;
+
+                require(['core_courseformat/local/courseindex/cm'], function(component) {
+                    component.init('course-index-cm-3331');
+                });
+                ;
+
+    require(['core_courseformat/local/courseindex/section'], function(component) {
+        component.init('course-index-section-1507');
+    });
+    ;
+
+require(['core_courseformat/local/courseindex/courseindex'], function(component) {
+    component.init('course-index');
+});
+</script><script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(4).php"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body id="page-mod-quiz-review" class="format-topics  path-mod path-mod-quiz chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam 118-185-187-137--moodle pagelayout-incourse course-202 context-52356 cmid-3309 cm-type-quiz category-1 lambda m-40 layout-full blockstyle-01 page-header-style-01 header-style-0 jsenabled"><div id="MathJax_Message" style="display: none;"></div>
+<div class="wrapper-lambda-outer">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<div id="page-wrapper-outer">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#maincontent">Skip to main content</a>
+</div><script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(5).php"></script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/combo(4)"></script><script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/jquery-3.6.0.min.js.download"></script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(6).php"></script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(7).php"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+    
+        <div class="drawer drawer-left show d-print-none" data-region="fixed-drawer" id="theme_boost-drawers-courseindex" data-preference="drawer-open-index" data-state="show-drawer-left" data-forceopen="0" data-close-on-resize="0">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-courseindex" data-toggle="tooltip" data-placement="right" title="Close course index">
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                        <nav id="courseindex" class="courseindex">
+    <div id="courseindex-content">
+        <div id="course-index" class="courseindex " role="tree">
+
+
+    <div class="courseindex-section " id="course-index-section-1501" data-for="section" data-id="1501" data-number="0" role="treeitem" aria-owns="courseindexcollapse0" tabindex="0" aria-selected="true">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection0" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#courseindexcollapse0" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse0" tabindex="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="http://118.185.187.137/moodle/course/view.php?id=202#section-0" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1">
+                General
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse0" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection0" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="1501" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3295" data-for="cm" data-id="3295" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_incomplete" data-for="cm_completion" data-value="0" id="yui_3_17_2_1_1793279575410_79">
+        <i class="icon fa fa-circle-thin fa-fw " title="To do" role="img" aria-label="To do"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3295" data-for="cm_name" tabindex="-1">
+                                MODEL EXAM Batch 2025 CSE IT AIML AIDS
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="course-index-section-1503" data-for="section" data-id="1503" data-number="2" role="treeitem" aria-owns="courseindexcollapse2" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection2" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#courseindexcollapse2" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse2" tabindex="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="http://118.185.187.137/moodle/course/view.php?id=202#section-2" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1">
+                Finding Time Complexity of Algorithms
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse2" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection2" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="1503" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3307" data-for="cm" data-id="3307" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_85">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3307" data-for="cm_name" tabindex="-1">
+                                Problem 1: Finding Complexity using Counter Method
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3308" data-for="cm" data-id="3308" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_91">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3308" data-for="cm_name" tabindex="-1">
+                                Problem 2: Finding Complexity using Counter method
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item d-flex pageitem" id="course-index-cm-3309" data-for="cm" data-id="3309" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_97">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3309" data-for="cm_name" tabindex="-1">
+                                Problem 3: Finding Complexity using Counter Method
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3310" data-for="cm" data-id="3310" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_103">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3310" data-for="cm_name" tabindex="-1">
+                                Problem 4: Finding Complexity using Counter Method
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3311" data-for="cm" data-id="3311" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_109">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3311" data-for="cm_name" tabindex="-1">
+                                Problem 5: Finding Complexity using counter method
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="course-index-section-1505" data-for="section" data-id="1505" data-number="3" role="treeitem" aria-owns="courseindexcollapse3" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection3" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#courseindexcollapse3" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse3" tabindex="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="http://118.185.187.137/moodle/course/view.php?id=202#section-3" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1">
+                Greedy Algorithms
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse3" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection3" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="1505" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3317" data-for="cm" data-id="3317" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_115">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3317" data-for="cm_name" tabindex="-1">
+                                1-G-Coin Problem
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3318" data-for="cm" data-id="3318" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_121">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3318" data-for="cm_name" tabindex="-1">
+                                2-G-Cookies Problem
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3319" data-for="cm" data-id="3319" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_127">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3319" data-for="cm_name" tabindex="-1">
+                                3-G-Burger Problem
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3320" data-for="cm" data-id="3320" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_133">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3320" data-for="cm_name" tabindex="-1">
+                                4-G-Array Sum max problem
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3321" data-for="cm" data-id="3321" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_139">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3321" data-for="cm_name" tabindex="-1">
+                                5-G-Product of Array elements-Minimum
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="course-index-section-1504" data-for="section" data-id="1504" data-number="4" role="treeitem" aria-owns="courseindexcollapse4" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection4" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#courseindexcollapse4" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse4" tabindex="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="http://118.185.187.137/moodle/course/view.php?id=202#section-4" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1">
+                Divide and Conquer
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse4" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection4" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="1504" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3312" data-for="cm" data-id="3312" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_145">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3312" data-for="cm_name" tabindex="-1">
+                                1-Number of Zeros in a Given Array
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3313" data-for="cm" data-id="3313" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_151">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3313" data-for="cm_name" tabindex="-1">
+                                2-Majority Element
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3314" data-for="cm" data-id="3314" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_157">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3314" data-for="cm_name" tabindex="-1">
+                                3-Finding Floor Value
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3315" data-for="cm" data-id="3315" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_163">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3315" data-for="cm_name" tabindex="-1">
+                                4-Two Elements sum to x
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3316" data-for="cm" data-id="3316" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_169">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3316" data-for="cm_name" tabindex="-1">
+                                5-Implementation of Quick Sort
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="course-index-section-1506" data-for="section" data-id="1506" data-number="5" role="treeitem" aria-owns="courseindexcollapse5" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection5" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#courseindexcollapse5" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse5" tabindex="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="http://118.185.187.137/moodle/course/view.php?id=202#section-5" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1">
+                Dynamic Programming 
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse5" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection5" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="1506" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3322" data-for="cm" data-id="3322" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_175">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3322" data-for="cm_name" tabindex="-1">
+                                1-DP-Playing with Numbers
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3323" data-for="cm" data-id="3323" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_181">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3323" data-for="cm_name" tabindex="-1">
+                                2-DP-Playing with chessboard
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3324" data-for="cm" data-id="3324" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_187">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3324" data-for="cm_name" tabindex="-1">
+                                3-DP-Longest Common Subsequence
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3325" data-for="cm" data-id="3325" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_193">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3325" data-for="cm_name" tabindex="-1">
+                                4-DP-Longest non-decreasing Subsequence
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="courseindex-section " id="course-index-section-1507" data-for="section" data-id="1507" data-number="6" role="treeitem" aria-owns="courseindexcollapse6" tabindex="-1" aria-selected="false">
+        <div class="courseindex-item d-flex
+                
+                
+                courseindex-section-title" id="courseindexsection6" data-for="section_item" tabindex="-1">
+            <a data-toggle="collapse" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#courseindexcollapse6" class="courseindex-chevron icons-collapse-expand " aria-expanded="true" aria-controls="courseindexcollapse6" tabindex="-1">
+                <span class="collapsed-icon icon-no-margin mr-1" title="Expand" tabindex="-1">
+                    <span class="dir-rtl-hide" tabindex="-1"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="dir-ltr-hide" tabindex="-1"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                    <span class="sr-only" tabindex="-1">Expand</span>
+                </span>
+                <span class="expanded-icon icon-no-margin mr-1" title="Collapse" tabindex="-1">
+                    <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    <span class="sr-only" tabindex="-1">Collapse</span>
+                </span>
+            </a>
+            <a href="http://118.185.187.137/moodle/course/view.php?id=202#section-6" class="courseindex-link text-truncate" data-action="togglecourseindexsection" data-for="section_title" tabindex="-1">
+                Competitive Programming
+            </a>
+            <span class="current-badge badge badge-primary ml-2 px-2 rounded-pill" tabindex="-1">
+                Highlighted
+            </span>
+            <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+            </span>
+            <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+        </div>
+        <div id="courseindexcollapse6" class="courseindex-item-content collapse show" aria-labelledby="courseindexsection6" role="group" tabindex="-1">
+            <ul class="courseindex-sectioncontent unlist" data-for="cmlist" data-id="1507" role="group" tabindex="-1">
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3326" data-for="cm" data-id="3326" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_199">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3326" data-for="cm_name" tabindex="-1">
+                                1-Finding Duplicates-O(n^2) Time Complexity,O(1) Space Complexity
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3327" data-for="cm" data-id="3327" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_205">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3327" data-for="cm_name" tabindex="-1">
+                                2-Finding Duplicates-O(n) Time Complexity,O(1) Space Complexity
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3328" data-for="cm" data-id="3328" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_211">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3328" data-for="cm_name" tabindex="-1">
+                                3-Print Intersection of 2 sorted arrays-O(m*n)Time Complexity,O(1) Space Complexity
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3329" data-for="cm" data-id="3329" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_217">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3329" data-for="cm_name" tabindex="-1">
+                                4-Print Intersection of 2 sorted arrays-O(m+n)Time Complexity,O(1) Space Complexity
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3330" data-for="cm" data-id="3330" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_223">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3330" data-for="cm_name" tabindex="-1">
+                                5-Pair with Difference-O(n^2)Time Complexity,O(1) Space Complexity
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+
+
+                <li class="courseindex-item
+                        
+                        
+                        
+                         d-flex  
+                        " id="course-index-cm-3331" data-for="cm" data-id="3331" role="treeitem" tabindex="-1" aria-selected="false">
+                    <span class="completioninfo completion_complete" data-for="cm_completion" data-value="1" id="yui_3_17_2_1_1793279575410_229">
+        <i class="icon fa fa-circle fa-fw " title="Done" role="img" aria-label="Done"></i>
+    </span>
+                            <a class="courseindex-link text-truncate" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3331" data-for="cm_name" tabindex="-1">
+                                6-Pair with Difference -O(n) Time Complexity,O(1) Space Complexity
+                            </a>
+                    <span class="courseindex-locked ml-1" data-for="cm_name" tabindex="-1">
+                        <i class="icon fa fa-lock fa-fw " aria-hidden="true" tabindex="-1"></i>
+                    </span>
+                    <span class="dragicon ml-auto" tabindex="-1"><i class="icon fa fa-arrows fa-fw " aria-hidden="true" tabindex="-1"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+</nav>
+
+    </div>
+</div>
+        <div class="drawer drawer-right d-print-none" data-region="fixed-drawer" id="theme_boost-drawers-blocks" data-preference="drawer-open-block" data-state="show-drawer-right" data-forceopen="" data-close-on-resize="0" aria-hidden="true">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-blocks" data-toggle="tooltip" data-placement="left" title="Close block drawer" data-aria-hidden-tab-index="" tabindex="-1">
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                        <section class="d-print-none" aria-label="Blocks">
+                    <div class="block-pos-desc">
+                        <span>Side Block Position</span>
+                    </div>
+                    
+                    <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#sb-1" class="sr-only sr-only-focusable" data-aria-hidden-tab-index="" tabindex="-1">Skip Quiz navigation</a>
+
+<section id="mod_quiz_navblock" class=" block block_fake  card mb-3" role="navigation" data-block="_fake" data-instance-id="fakeid-6ae346571d066" aria-labelledby="instance-fakeid-6ae346571d066-header">
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-fakeid-6ae346571d066-header" class="card-title d-inline">Quiz navigation</h5>
+
+
+        <div class="card-text content mt-3">
+            <div class="qn_buttons clearfix allquestionsononepage"><a class="qnbutton correct free btn thispage" id="quiznavbutton1" title="Correct" data-quiz-page="0" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#question-349663-1" data-aria-hidden-tab-index="" tabindex="-1"><span class="thispageholder"></span><span class="trafficlight"></span><span class="accesshide">Question </span>1<span class="accesshide"> This page <span class="flagstate"></span></span></a></div><div class="othernav"><a class="mod_quiz-next-nav" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3309" data-aria-hidden-tab-index="" tabindex="-1">Finish review</a></div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-1"></span></aside>
+                </section>
+
+    </div>
+</div>
+
+<div id="page" data-region="mainpage" data-usertour="scroller" class="drawers show-drawer-left drag-container">
+<div id="page-top"></div>
+<div class="wrapper-lambda">
+
+	    
+	    <header id="main-header" class="clearfix top style-0">
+	    
+	    	
+	    	<div id="header-logo">
+	    		<div class="row">
+	    			<div class="col-md-6">
+	    					<a href="http://118.185.187.137/moodle" class="logo"><img src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/REC_Logo_Color_PNG_RGB.png" alt="REC-OCS-1"></a>
+	    			</div>
+	    			<div class="col-md-6 login-header">
+	    				<div class="profileblock">
+	    						<div class="popover-region collapsed popover-region-notifications" id="nav-notification-popover-container" data-userid="14987" data-region="popover-region">
+    <div class="popover-region-toggle nav-link icon-no-margin" data-region="popover-region-toggle" role="button" aria-controls="popover-region-container-6ae346571d7ac6ae34657187d14" aria-haspopup="true" aria-label=" Show notification window with no new notifications   " tabindex="0">
+                <i class="icon fa fa-bell-o fa-fw " title="Toggle notifications menu" role="img" aria-label="Toggle notifications menu"></i>
+        <div class="count-container hidden" data-region="count-container" aria-hidden="true">
+            0
+        </div>
+
+    </div>
+    <div id="popover-region-container-6ae346571d7ac6ae34657187d14" class="popover-region-container" data-region="popover-region-container" aria-expanded="false" aria-hidden="true" aria-label="Notification window" role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#" title="Mark all as read" data-action="mark-all-read" role="button" aria-label="Mark all as read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" role="img" aria-label="Loading"></i></span>
+        </a>
+            <a href="http://118.185.187.137/moodle/message/notificationpreferences.php" title="Notification preferences" aria-label="Notification preferences">
+                <i class="icon fa fa-cog fa-fw " aria-hidden="true"></i></a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications" data-region="all-notifications" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">You have no notifications</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" role="img" aria-label="Loading"></i></span>
+        </div>
+                <a class="see-all-link" href="http://118.185.187.137/moodle/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div>
+	    						<div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+	                    				
+	                    				<div class="usermenu">
+	                    				        <div class="dropdown show">
+	                    				            <a href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#" id="user-menu-toggle" data-toggle="dropdown" aria-label="User menu" aria-haspopup="true" aria-controls="user-action-menu" class="dropdown-toggle">Santhana Marieswari L 251001231-2025-IT
+	                    				                <span class="userbutton">
+	                    				                    <span class="avatars">
+	                    				                            <span class="avatar current">
+	                    				                                <span class="userinitials size-35">S2</span>
+	                    				                            </span>
+	                    				                    </span>
+	                    				                </span>
+	                    				            </a>
+	                    				            <div id="user-action-menu" class="dropdown-menu dropdown-menu-right">
+	                    				                <div id="usermenu-carousel" class="carousel slide" data-touch="false" data-interval="false" data-keyboard="false">
+	                    				                    <div class="carousel-inner">
+	                    				                        <div id="carousel-item-main" class="carousel-item active" role="menu" tabindex="-1" aria-label="User">
+	                    				                                    <a href="http://118.185.187.137/moodle/user/profile.php" class="dropdown-item" role="menuitem" tabindex="-1">
+	                    				                                            
+	                    				                                        Profile
+	                    				                                    </a>
+	                    				                                
+	                    				                                    <a href="http://118.185.187.137/moodle/grade/report/overview/index.php" class="dropdown-item" role="menuitem" tabindex="-1">
+	                    				                                            
+	                    				                                        Grades
+	                    				                                    </a>
+	                    				                                
+	                    				                                    <a href="http://118.185.187.137/moodle/calendar/view.php?view=month" class="dropdown-item" role="menuitem" tabindex="-1">
+	                    				                                            
+	                    				                                        Calendar
+	                    				                                    </a>
+	                    				                                
+	                    				                                    <a href="http://118.185.187.137/moodle/user/files.php" class="dropdown-item" role="menuitem" tabindex="-1">
+	                    				                                            
+	                    				                                        Private files
+	                    				                                    </a>
+	                    				                                
+	                    				                                    <a href="http://118.185.187.137/moodle/reportbuilder/index.php" class="dropdown-item" role="menuitem" tabindex="-1">
+	                    				                                            
+	                    				                                        Reports
+	                    				                                    </a>
+	                    				                                
+	                    				                                <div class="dropdown-divider"></div>
+	                    				                                    <a href="http://118.185.187.137/moodle/user/preferences.php" class="dropdown-item" role="menuitem" tabindex="-1">
+	                    				                                            
+	                    				                                        Preferences
+	                    				                                    </a>
+	                    				                                <div class="dropdown-divider"></div>
+	                    				                                    <a href="http://118.185.187.137/moodle/login/logout.php?sesskey=GnX0Z6Aehi" class="dropdown-item" role="menuitem" tabindex="-1">
+	                    				                                            
+	                    				                                        Log out
+	                    				                                    </a>
+	                    				                                
+	                    				                        </div>
+	                    				                    </div>
+	                    				                </div>
+	                    				            </div>
+	                    				        </div>
+	                    				</div>
+	            				</div>
+	    						<a href="http://118.185.187.137/moodle/user/view.php?id=14987&amp;course=202" class="d-inline-block aabtn"><span class="userinitials size-80">S2</span></a>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </header>
+	    
+	    <header class="lambda-nav style-0">
+	            <nav class="navbar navbar-expand">
+	    			<div class="menu">
+	            		<nav class="moremenu navigation observed">
+	            		    <ul id="moremenu-6ae346571cf97-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+	            		                <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+	            		                            <a role="menuitem" class="nav-link  " href="http://118.185.187.137/moodle/?redirect=0" tabindex="0" aria-current="true">
+	            		                                Home
+	            		                            </a>
+	            		                </li>
+	            		                <li data-key="myhome" class="nav-item" role="none" data-forceintomoremenu="false">
+	            		                            <a role="menuitem" class="nav-link  " href="http://118.185.187.137/moodle/my/" tabindex="-1">
+	            		                                Dashboard
+	            		                            </a>
+	            		                </li>
+	            		                <li data-key="mycourses" class="nav-item" role="none" data-forceintomoremenu="false">
+	            		                            <a role="menuitem" class="nav-link  " href="http://118.185.187.137/moodle/my/courses.php" tabindex="-1">
+	            		                                My courses
+	            		                            </a>
+	            		                </li>
+	            		        <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+	            		            <a class="dropdown-toggle nav-link " href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#" id="moremenu-dropdown-6ae346571cf97" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+	            		                More
+	            		            </a>
+	            		            <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-6ae346571cf97" role="menu">
+	            		            </ul>
+	            		        </li>
+	            		    </ul>
+	            		</nav>
+	    			</div>
+	    			<div class="d-flex">
+	    			
+	    				<div class="search-margin"></div>
+	    				<div class="lambda-search-bar">
+	    					<form id="lambda-navbarsearch-form" autocomplete="off" method="get" action="http://118.185.187.137/moodle/course/search.php">
+							<div class="search-container">
+								<i class="lambda icon-search1" aria-hidden="true"></i>
+								<input id="navbarsearchbox" type="text" name="q" data-region="input" autocomplete="off" aria-label="Search courses" placeholder="Search courses">
+								<label for="navbarsearchbox" class="lambda-sr-only">Search courses</label>
+							</div>
+						</form>
+	    				</div>
+	    			</div>
+	            </nav>
+	    </header>
+
+
+    <div class="drawer-toggles d-flex">
+            <div class="drawer-toggler drawer-left-toggle open-nav d-print-none">
+                <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-courseindex" data-toggle="tooltip" data-placement="right" title="Open course index">
+                    <span class="sr-only">Open course index</span>
+                    <i class="icon fa fa-list fa-fw " aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="drawer-toggler drawer-right-toggle ml-auto d-print-none">
+                <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-blocks" data-toggle="tooltip" data-placement="right" title="Open block drawer">
+                    <span class="sr-only">Open block drawer</span>
+                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                </button>
+            </div>
+    </div>
+
+        <div id="lambda-incourse-header">
+            <header id="page-header" class="header-maxwidth d-print-none">
+    <div class="w-100">
+        <div class="d-flex flex-wrap">
+            <div id="page-navbar">
+                <nav aria-label="Navigation bar">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="http://118.185.187.137/moodle/course/view.php?id=202#section-2" title="CS23331-Design and Analysis of Algorithms-2025 Batch-CSE, IT, AIML &amp; AIDS">CS23331-DAA-2025-CSE</a>
+                </li>
+        
+                <li class="breadcrumb-item"><span>Problem 3: Finding Complexity using Counter Method</span></li>
+        </ol>
+</nav>
+            </div>
+            <div class="ml-auto d-flex">
+                
+            </div>
+            <div id="course-header">
+                
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                        <div class="page-context-header"><div class="page-header-image mr-2"><div class="assessment activityiconcontainer modicon_quiz"><img class="icon activityicon " aria-hidden="true" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/monologo.svg" alt=""></div></div><div class="page-header-headings"><h1 class="h2">Problem 3: Finding Complexity using Counter Method</h1></div></div>
+                    </div>
+            <div class="header-actions-container ml-auto" data-region="header-actions-container">
+            </div>
+        </div>
+    </div>
+</header>
+        </div>
+    
+    <div id="page-content" class="row ">
+    
+        <div id="region-main-box" class="col-xs-12 col-12 px-0">
+            <section id="region-main" class="mx-15">
+
+                <span class="notifications" id="user-notifications"></span>
+                    <span id="maincontent"></span>
+                    <div class="activity-header" data-for="page-activity-header"></div>
+                <div role="main"><table class="generaltable generalbox quizreviewsummary"><tbody><tr><th class="cell" scope="row">Started on</th><td class="cell">Thursday, 6 August 2026, 10:18 PM</td></tr><tr><th class="cell" scope="row">State</th><td class="cell">Finished</td></tr><tr><th class="cell" scope="row">Completed on</th><td class="cell">Thursday, 6 August 2026, 10:24 PM</td></tr><tr><th class="cell" scope="row">Time taken</th><td class="cell">5 mins 17 secs</td></tr><tr><th class="cell" scope="row">Marks</th><td class="cell">1.00/1.00</td></tr><tr><th class="cell" scope="row">Grade</th><td class="cell"><b>10.00</b> out of 10.00 (<b>100</b>%)</td></tr></tbody></table><form action="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309" method="post" class="questionflagsaveform" autocomplete="off" id="yui_3_17_2_1_1793279575410_49"><div><div id="question-349663-1" class="que coderunner adaptive_adapted_for_coderunner correct"><div class="info"><h3 class="no">Question <span class="qno">1</span></h3><div class="state">Correct</div><div class="grade">Mark 1.00 out of 1.00</div><div class="questionflag editable" id="yui_3_17_2_1_1793279575410_25"><input type="hidden" name="q349663:1_:flagged" value="0"><input type="hidden" value="qaid=2472354&amp;qubaid=349663&amp;qid=3435307&amp;slot=1&amp;checksum=ded0b8a198dd51e34b3aa68648452ab7&amp;sesskey=GnX0Z6Aehi&amp;newstate=" class="questionflagpostdata">
+<input type="hidden" class="questionflagvalue" id="q349663:1_:flaggedcheckbox" name="q349663:1_:flagged" value="0"><a tabindex="0" class="aabtn" role="button" aria-pressed="false" aria-label="Flagged" title="Flag this question for future reference"><img class="questionflagimage" src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/unflagged.svg" alt="">Flag question</a></div></div><div class="content"><div class="formulation clearfix"><h4 class="accesshide">Question text</h4><input type="hidden" name="q349663:1_:sequencecheck" value="6"><p dir="ltr" style="text-align: left;"></p><pre>Convert the following algorithm into a program and find its time complexity using counter method.<br>&nbsp;Factor(num) {<br>&nbsp;{<br>&nbsp;&nbsp;&nbsp; for (i = 1; i &lt;= num;++i)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num % i== 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d ", i);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;  }&nbsp;<br>  }<br><b>&nbsp;<br></b><b>&nbsp;<br></b><b>Note: </b>No need of counter increment for declarations and scanf() and&nbsp;counter variable printf() statement.<br><br><b>Input:<br></b>&nbsp;A positive Integer n<br><b>Output:<br></b>Print the value of the counter variable</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><p></p><div class="prompt"><label class="answerprompt" for="id_q349663:1_answer">Answer:</label></div><textarea class="coderunner-answer edit_code" name="q349663:1_answer" id="id_q349663:1_answer" spellcheck="false" rows="18" data-params="{}" data-globalextra="" data-lang="C" data-test0="" readonly="" style="display: none;">#include&lt;stdio.h&gt;
+int main(){
+    int n;
+    scanf("%d",&amp;n);
+    int counter=0;
+    
+        
+            for(int i=1;i&lt;=n;i++){
+                counter++;
+                counter++;
+                if(n%i==0){
+                    counter++;
+                }
+                
+                }
+                counter++;
+                printf("%d",counter);
+            }
+        
+    
+
+
+</textarea><div id="id_q349663:1_answer_wrapper" class="ui_wrapper" style="resize: vertical; overflow: hidden; min-height: 455px; width: 100%; border: 1px solid darkgrey;"><div class=" ace_editor ace-tm" style="resize: none; height: 439.4px; width: 1016.74px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly="" style="opacity: 0; font-size: 1px; height: 1px; width: 1px; top: 18px; left: 52px;" id="ace_id_q349663:1_answer"></textarea><div class="ace_gutter moodle-has-zindex" aria-hidden="true" style="left: 0px; width: 49px;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px; top: 0px; left: 0px; width: 49px;"><div class="ace_gutter-cell ace_gutter-active-line " style="height: 18px; top: 0px;">1<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 18px;">2<span class="ace_fold-widget ace_start ace_open" style="height: 18px; display: inline-block;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 36px;">3<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 54px;">4<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 72px;">5<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 90px;">6<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 108px;">7<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 126px;">8<span class="ace_fold-widget ace_start ace_open" style="height: 18px; display: inline-block;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 144px;">9<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 162px;">10<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 180px;">11<span class="ace_fold-widget ace_start ace_open" style="height: 18px; display: inline-block;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 198px;">12<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 216px;">13<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 234px;">14<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 252px;">15<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 270px;">16<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 288px;">17<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 306px;">18<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 324px;">19<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 342px;">20<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 360px;">21<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 378px;">22<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 18px; top: 396px;">23<span style="display: none;"></span></div></div></div><div class="ace_scroller" style="line-height: 18px; left: 48.3984px; right: 0px; bottom: 0px;"><div class="ace_content" style="top: 0px; left: 0px; width: 968.602px; height: 475px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 620px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height: 18px; top: 0px; left: 0px; right: 0px;"></div></div><div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; top: 0px; left: 0px;"><div class="ace_line" style="height: 18px; top: 0px;"><span class="ace_keyword">#include</span><span class="ace_constant ace_other">&lt;stdio.h&gt;</span></div><div class="ace_line" style="height: 18px; top: 18px;"><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height: 18px; top: 36px;">    <span class="ace_storage ace_type">int</span> <span class="ace_identifier">n</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 18px; top: 54px;">    <span class="ace_support ace_function ace_C99 ace_c">scanf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span><span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">n</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 18px; top: 72px;">    <span class="ace_storage ace_type">int</span> <span class="ace_identifier">counter</span><span class="ace_keyword ace_operator">=</span><span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 18px; top: 90px;">    </div><div class="ace_line" style="height: 18px; top: 108px;"><span class="ace_indent-guide">    </span>    </div><div class="ace_line" style="height: 18px; top: 126px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword ace_control">for</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">=</span><span class="ace_constant ace_numeric">1</span><span class="ace_punctuation ace_operator">;</span><span class="ace_identifier">i</span><span class="ace_keyword ace_operator">&lt;=</span><span class="ace_identifier">n</span><span class="ace_punctuation ace_operator">;</span><span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span><span class="ace_paren ace_rparen">)</span><span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height: 18px; top: 144px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">counter</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 18px; top: 162px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">counter</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 18px; top: 180px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword ace_control">if</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">n</span><span class="ace_keyword ace_operator">%</span><span class="ace_identifier">i</span><span class="ace_keyword ace_operator">==</span><span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">)</span><span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height: 18px; top: 198px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">counter</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 18px; top: 216px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height: 18px; top: 234px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    </div><div class="ace_line" style="height: 18px; top: 252px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height: 18px; top: 270px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">counter</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 18px; top: 288px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span><span class="ace_identifier">counter</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 18px; top: 306px;"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height: 18px; top: 324px;"><span class="ace_indent-guide">    </span>    </div><div class="ace_line" style="height: 18px; top: 342px;">    </div><div class="ace_line" style="height: 18px; top: 360px;"></div><div class="ace_line" style="height: 18px; top: 378px;"></div><div class="ace_line" style="height: 18px; top: 396px;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="display: block; top: 0px; left: 4px; width: 8px; height: 18px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 17px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 17px; height: 414px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 17px; left: 48.3984px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 17px; width: 968.602px;">&nbsp;</div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה</div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-language-override: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div><div class="im-controls"><div class="d-flex"></div></div></div><div class="outcome clearfix"><h4 class="accesshide">Feedback</h4><div class="feedback"><div class="specificfeedback"><div class="coderunner-test-results good"><div class="table-responsive"><table class="coderunner-test-results">
+<thead>
+<tr>
+<td class="header c0" style=""></td>
+<th class="header c1" style="" scope="col">Input</th>
+<th class="header c2" style="" scope="col">Expected</th>
+<th class="header c3" style="" scope="col">Got</th>
+<td class="header c4 lastcol" style=""></td>
+</tr>
+</thead>
+<tbody><tr class="r1">
+<td class="cell c0" style=""><i class="icon fa fa-check text-success fa-fw " title="Correct" role="img" aria-label="Correct"></i></td>
+<td class="cell c1" style=""><pre class="tablecell">12</pre></td>
+<td class="cell c2" style=""><pre class="tablecell">31</pre></td>
+<td class="cell c3" style=""><pre class="tablecell">31</pre></td>
+<td class="cell c4 lastcol" style=""><i class="icon fa fa-check text-success fa-fw " title="Correct" role="img" aria-label="Correct"></i></td>
+</tr>
+<tr class="r0">
+<td class="cell c0" style=""><i class="icon fa fa-check text-success fa-fw " title="Correct" role="img" aria-label="Correct"></i></td>
+<td class="cell c1" style=""><pre class="tablecell">25</pre></td>
+<td class="cell c2" style=""><pre class="tablecell">54</pre></td>
+<td class="cell c3" style=""><pre class="tablecell">54</pre></td>
+<td class="cell c4 lastcol" style=""><i class="icon fa fa-check text-success fa-fw " title="Correct" role="img" aria-label="Correct"></i></td>
+</tr>
+<tr class="r1 lastrow">
+<td class="cell c0" style=""><i class="icon fa fa-check text-success fa-fw " title="Correct" role="img" aria-label="Correct"></i></td>
+<td class="cell c1" style=""><pre class="tablecell">4</pre></td>
+<td class="cell c2" style=""><pre class="tablecell">12</pre></td>
+<td class="cell c3" style=""><pre class="tablecell">12</pre></td>
+<td class="cell c4 lastcol" style=""><i class="icon fa fa-check text-success fa-fw " title="Correct" role="img" aria-label="Correct"></i></td>
+</tr>
+</tbody>
+</table>
+</div><p>Passed all tests! &nbsp;<i class="icon fa fa-check text-success fa-fw " title="Correct" role="img" aria-label="Correct"></i></p></div></div></div><div class="im-feedback"><div class="correctness badge correct">Correct</div><div class="gradingdetails">Marks for this submission: 1.00/1.00.</div></div></div></div></div><input type="hidden" name="sesskey" value="GnX0Z6Aehi"><div class="submitbtns"></div></div></form><div class="submitbtns"><a class="mod_quiz-next-nav" href="http://118.185.187.137/moodle/mod/quiz/view.php?id=3309">Finish review</a></div></div>
+                    <p class="text-center mt-4 lambda-btc"><a class="btn btn-primary" href="http://118.185.187.137/moodle/course/view.php?id=202">Back to Course</a></p>
+                
+
+            </section>
+        </div>
+    </div>
+
+
+<a id="sticky-to-top" href="http://118.185.187.137/moodle/mod/quiz/review.php?attempt=348183&amp;cmid=3309#page-top" uk-totop="" uk-scroll="" class="uk-icon uk-totop"><svg width="18" height="10" viewBox="0 0 18 10" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.2" points="1 9 9 1 17 9 "></polyline></svg></a>
+<footer id="page-footer" class="lambda-page-footer">
+    
+	
+	                        <div class="footer-blocks">
+	                            <div class="container-fluid">
+									<div class="row">
+										<div class="col-md-3">
+											<section data-region="footer-left" class="hidden-print">
+												<div class="block-pos-desc"><span>Footer (Left)</span></div>
+												
+												<aside id="block-region-footer-left" class="block-region" data-blockregion="footer-left" data-droptarget="1"></aside>
+											</section>
+										</div>
+										<div class="col-md-3">
+											<section data-region="footer-middle" class="hidden-print">
+												<div class="block-pos-desc"><span>Footer (Middle)</span></div>
+												
+												<aside id="block-region-footer-middle" class="block-region" data-blockregion="footer-middle" data-droptarget="1"></aside>
+											</section>
+										</div>
+										<div class="col-md-3">
+											<section data-region="footer-middle-2" class="hidden-print">
+												<div class="block-pos-desc"><span>Footer (Middle 2)</span></div>
+												
+												<aside id="block-region-footer-middle-2" class="block-region" data-blockregion="footer-middle-2" data-droptarget="1"></aside>
+											</section>
+										</div>
+										<div class="col-md-3">
+											<section data-region="footer-right" class="hidden-print">
+												<div class="block-pos-desc"><span>Footer (Right)</span></div>
+												
+												<aside id="block-region-footer-right" class="block-region" data-blockregion="footer-right" data-droptarget="1"></aside>
+											</section>
+										</div>
+									</div>
+								
+	
+								
+								
+	                            </div>
+	                        </div>
+	
+	<div class="footer-bottom">	
+        <div class="container-fluid">
+            <div id="course-footer" class="row">
+                <div class="col-12">
+                    
+
+			            
+
+
+		
+                    <div class="logininfo">You are logged in as <a href="http://118.185.187.137/moodle/user/profile.php?id=14987" title="View profile">Santhana Marieswari L 251001231-2025-IT</a> (<a href="http://118.185.187.137/moodle/login/logout.php?sesskey=GnX0Z6Aehi">Log out</a>)</div>
+                    <div class="tool_usertours-resettourcontainer"></div>
+        
+                    <div class="tool_dataprivacy"><a href="http://118.185.187.137/moodle/admin/tool/dataprivacy/summary.php">Data retention summary</a></div>
+                    <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'http://118.185.187.137/moodle/lib/requirejs.php/1752832296/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'http://118.185.187.137/moodle/lib/javascript.php/1752832296/lib/jquery/jquery-3.6.0.min',
+        jqueryui: 'http://118.185.187.137/moodle/lib/javascript.php/1752832296/lib/jquery/ui-1.13.0/jquery-ui.min',
+        jqueryprivate: 'http://118.185.187.137/moodle/lib/javascript.php/1752832296/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(8).php"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('en');
+});;
+M.util.js_pending('core_courseformat/courseeditor'); require(['core_courseformat/courseeditor'], function(amd) {amd.setViewFormat("202", {"editing":false,"supportscomponents":true,"statekey":"1793253070_1793268324"}); M.util.js_complete('core_courseformat/courseeditor');});;
+
+require(['core_courseformat/local/courseindex/placeholder'], function(component) {
+    component.init('course-index-placeholder');
+});
+;
+
+require(['core_courseformat/local/courseindex/drawer'], function(component) {
+    component.init('courseindex');
+});
+;
+
+require(['theme_boost/drawers']);
+;
+
+require(['theme_boost/drawers']);
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, Controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new Controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-6ae346571cf97-navbar-nav'));
+    });
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('qtype_coderunner/userinterfacewrapper'); require(['qtype_coderunner/userinterfacewrapper'], function(amd) {amd.newUiWrapper("ace", "id_q349663:1_answer"); M.util.js_complete('qtype_coderunner/userinterfacewrapper');});;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(52356, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.yui.add_module({"core_question_engine":{"name":"core_question_engine","fullpath":"http:\/\/118.185.187.137\/moodle\/lib\/javascript.php\/1752832296\/question\/qengine.js","requires":["node","event"]},"mod_quiz":{"name":"mod_quiz","fullpath":"http:\/\/118.185.187.137\/moodle\/lib\/javascript.php\/1752832296\/mod\/quiz\/module.js","requires":["base","dom","event-delegate","event-key","core_question_engine"]}});
+
+//]]>
+</script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(9).php"></script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(10).php"></script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(11).php"></script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(12).php"></script>
+<script src="./Problem 3_ Finding Complexity using Counter Method_ Attempt review_files/javascript(13).php"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL","collapseall":"Collapse all","expandall":"Expand all"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"question":{"flagged":"Flagged"},"quiz":{"functiondisabledbysecuremode":"That functionality is currently disabled","startattempt":"Start attempt","timesup":"Time is up!"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+ M.util.js_pending('random6ae34657187d11'); Y.use('core_question_flags', function(Y) { M.core_question_flags.init(Y, "http:\/\/118.185.187.137\/moodle\/question\/toggleflag.php", [{"src":"http:\/\/118.185.187.137\/moodle\/theme\/image.php\/lambda2\/core\/1753066307\/i\/unflagged","title":"Flag this question for future reference","alt":"Flagged","text":"Flag question"},{"src":"http:\/\/118.185.187.137\/moodle\/theme\/image.php\/lambda2\/core\/1753066307\/i\/flagged","title":"Remove flag","alt":"Flagged","text":"Remove flag"}]);  M.util.js_complete('random6ae34657187d11'); });
+ M.util.js_pending('random6ae34657187d12'); Y.use('mod_quiz', function(Y) { M.mod_quiz.nav.init(Y);  M.util.js_complete('random6ae34657187d12'); });
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6ae34657187d15'); Y.use('mod_quiz', function(Y) { M.mod_quiz.init_review_form(Y);  M.util.js_complete('random6ae34657187d15'); });
+ M.util.js_pending('random6ae34657187d16'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6ae34657187d16'); });
+})();
+//]]>
+</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer></div>
+</div>
+
+
+
+</div>
+</div><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div>
+
+</body></html>
